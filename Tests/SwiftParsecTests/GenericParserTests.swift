@@ -564,7 +564,7 @@ class GenericParserTests: XCTestCase {
                     input: input
                 )
                 
-                if state != input.characters.filter({ $0.isAlpha }).count {
+                if state != input.filter({ $0.isAlpha }).count {
                     
                     XCTFail(errorMessage)
                 

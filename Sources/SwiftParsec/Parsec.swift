@@ -408,21 +408,6 @@ extension String: Stream {
 }
 
 //==============================================================================
-// Extension implementing the `Stream` protocol.
-extension String.CharacterView: Stream {
-    
-    public typealias Element = String.CharacterView.Iterator.Element
-    
-    /// Create an instance containing `elements`.
-    public init(arrayLiteral elements: Element...) {
-        
-        self.init(elements)
-        
-    }
-    
-}
-
-//==============================================================================
 /// Types conforming to the `EmptyInitializable` protocol provide an empty
 /// intializer.
 public protocol EmptyInitializable {

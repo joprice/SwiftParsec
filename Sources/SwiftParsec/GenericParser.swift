@@ -895,8 +895,7 @@ public extension Parsec {
 //==============================================================================
 // Parsec extension where the elements are `Equatable`
 public extension Parsec
-where StreamType.Element == StreamType.Iterator.Element,
-StreamType.Iterator.Element: Equatable {
+where StreamType.Iterator.Element: Equatable {
     
     // TODO: Move this function into the `Parsec` protocol extension when Swift
     // will allow to add requirements to `associatedtype` type constraint
