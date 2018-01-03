@@ -1039,7 +1039,7 @@ extension TokenParser {
         
     }
     
-    private static func sign<Number: SignedNumber>()
+    private static func sign<Number: SignedNumeric>()
         -> GenericParser<String, UserState, (Number) -> Number> {
             
         return GenericParser.character("-") *> GenericParser(result: -) <|>
@@ -1110,7 +1110,7 @@ extension TokenParser {
             guard !string.isEmpty else { return unit }
             
             var str = string
-            let c = str.popFirst()!
+            let c = str.remove(at: string.startIndex)
             
             let charParser: VoidParser
             if c.isAlpha {
